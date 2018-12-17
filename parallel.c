@@ -1,3 +1,5 @@
+//Hab alles neu geschrieben aber habs jetzt verstanden :)
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
