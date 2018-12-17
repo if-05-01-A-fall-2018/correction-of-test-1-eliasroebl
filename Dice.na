@@ -1,0 +1,68 @@
+#Added strings
+#changed position and amount of inc
+#changed rel 2x
+#changed lit 2x
+#added 2 lv
+#changed rel for check if input_a = input_b or not
+
+"Enter first number:Enter second number:"
+inc 12
+
+.false_first_input
+lit 0
+lit 19
+lit 20
+out 2
+
+la 0 32
+la 0 36
+in 0
+lit 0
+lv 0 32
+rel 0
+fjmp .false_first_input
+lit 6
+lv 0 32
+rel 4
+fjmp .false_first_input
+
+.false_second_input
+lit 19
+lit 20
+lit 21
+out 2
+
+la 0 36
+la 0 40
+in 0
+lit 0
+lv 0 36
+rel 0
+fjmp .false_second_input
+lit 6
+lv 0 36
+rel 4
+fjmp .false_second_input
+
+la 0 40
+lv 0 32
+lv 0 36
+add
+sto
+
+lv 0 32
+lv 0 36
+rel 2
+
+fjmp .stop
+la 0 40
+lv 0 40
+lit 2
+mul
+sto
+
+.stop
+lv 0 40
+out 0
+out 3
+halt
